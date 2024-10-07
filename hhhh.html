@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeddingCloud</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 60px;
+        }
+        .navbar {
+            background-color: #f8f4f1;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0d8d0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #5a3921;
+            display: flex;
+            align-items: center;
+        }
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7-100.4-33.5c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.4c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1z" fill="%23e91e63"/%3E%3C/svg%3E');
+            background-size: cover;
+            margin-right: 10px;
+        }
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #5a3921;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .nav-links a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .hero-section {
+            background-image: url('https://www.travelandleisure.com/thmb/hm1djoflREA9IsW5rIGwrAGCxbQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-wild-dunes-BEACHWEDHOTEL1223-c4aed295aa9d413bbad9cc911e8c65d5.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure the hero section takes up one full screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+}
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        .hero-text {
+            position: relative;
+            text-align: center;
+            color: #5D4037;
+        }
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .hero-text p {
+            font-size: 20px;
+            margin: 0;
+            color: #7F7F7F;
+        }
+        .about-section {
+            background-color: #f1e3d3;
+            padding: 50px;
+            margin: 0 auto;
+            max-width: 1500px;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            padding-left: 100px; /* Increase left padding */
+            padding-right: 100px; /* Increase right padding */
+        }
+        .about-image {
+            flex: 1.5;
+            margin-right: 30px;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .about-text {
+            flex: 2;
+        }
+        .about-text h2 {
+            font-size: 36px;
+            color: #5D4037;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #d0a67d;
+            display: inline-block;
+        }
+        .about-text p {
+            font-size: 18px;
+            color: #5D4037;
+            line-height: 1.6;
+        }
+        .services-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffe4e1;
+            height: 100vh;
+        }
+
+        .services-section h2 {
+            font-size: 36px;
+            color: #5D4037;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .services-section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #d0a67d;
+            margin: 10px auto 0;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-info h3 {
+            font-size: 24px;
+            color: #5D4037;
+            margin-bottom: 10px;
+        }
+
+        .service-info p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .testimonials-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .testimonial-card blockquote {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .testimonial-card img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .testimonial-card .role {
+            color: gray;
+            font-size: 0.9em;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+            height: 20vh; /* Full screen */
+        }
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-image {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image"></div>
+                WeddingCloud
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section" id="home">
+        <div class="hero-text">
+            <h1>Digitalize Your Wedding</h1>
+            <p>Preserve Your Memories</p>
+        </div>
+    </div>
+
+    <div class="about-section" id="about">
+        <div class="about-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmvw0m4iT0STHpUbkKPFLh-C1S6tjY6OQyw&s" alt="Balloons">
+        </div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>We specialize in transforming your wedding memories into a digital format so you can cherish them forever. Our expert team uses state-of-the-art technology to ensure that every moment is captured in stunning detail.</p>
+        </div>
+    </div>
+
+    <div class="services-section" id="services">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmvw0m4iT0STHpUbkKPFLh-C1S6tjY6OQyw&s" alt="Digital Albums" class="service-image">
+                <div class="service-info">
+                    <h3>Digital Albums</h3>
+                    <p>Create a stunning digital album that tells the story of your wedding day in a beautifully curated format.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://lirp.cdn-website.com/28cd0bb4/dms3rep/multi/opt/traditional+american+wedding-1920w.jpeg" alt="Video Montage" class="service-image">
+                <div class="service-info">
+                    <h3>Video Montage</h3>
+                    <p>Relive your special day with an expertly crafted video montage that highlights the best moments.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://lirp.cdn-website.com/28cd0bb4/dms3rep/multi/opt/traditional+american+wedding-1920w.jpeg" alt="Digital Photography" class="service-image">
+                <div class="service-info">
+                    <h3>Digital Photography</h3>
+                    <p>Capture your wedding day in crisp, high-definition digital photos that you can share and treasure forever.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials Section -->
+    <div class="testimonials-section" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <blockquote>
+                    <p>"The digital album they made for us was absolutely stunning! We can easily share it with family and friends."</p>
+                </blockquote>
+                <img src="https://example.com/bride-image.jpg" alt="Bride Image">
+                <p class="name">Alice P.</p>
+                <p class="role">Bride</p>
+                <div class="stars">
+                    ★★★★★
+                </div>
+            </div>
+    
+            <div class="testimonial-card">
+                <blockquote>
+                    <p>"The video montage brought back so many memories. It was like reliving our special day all over again."</p>
+                </blockquote>
+                <img src="https://example.com/groom-image.jpg" alt="Groom Image">
+                <p class="name">Jonathan M.</p>
+                <p class="role">Groom</p>
+                <div class="stars">
+                    ★★★★★
+                </div>
+            </div>
+    
+            <div class="testimonial-card">
+                <blockquote>
+                    <p>"Our decision to go digital with our wedding memories was the best choice we could have made. Everything is so beautifully captured."</p>
+                </blockquote>
+                <img src="https://example.com/couple-image.jpg" alt="Couple Image">
+                <p class="name">Sophie and Ty</p>
+                <p class="role">Married Couple</p>
+                <div class="stars">
+                    ★★★★★
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Contact Section -->
+    <div class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to book our services, feel free to reach out:</p>
+        <p>Email: info@weddingcloud.com</p>
+        <p>Phone: +1-234-567-890</p>
+    </div>
+
+</body>
+</html>
