@@ -1,0 +1,303 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    background-image: url('https://www.travelandleisure.com/thmb/hm1djoflREA9IsW5rIGwrAGCxbQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-wild-dunes-BEACHWEDHOTEL1223-c4aed295aa9d413bbad9cc911e8c65d5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #F6F1F1;
+    padding: 10px 0;
+    border-bottom: 1px solid #f8f8f8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #097ed1;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    background-image: url("https://i.pinimg.com/originals/f8/a0/be/f8a0be61afdcd037694ad5c0f45c8865.png");
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5a3921;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    color: #146C94;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin: 0;
+    color: #097ed1;
+}
+
+.about-section {
+    /* background-color: #AFD3E2; */
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 1500px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.about-image {
+    flex: 1.5;
+    margin-right: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #5D4037;
+    margin-bottom: 10px;
+    border-bottom: 4px solid #d0a67d;
+    display: inline-block;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #5D4037;
+    line-height: 1.6;
+}
+
+.services-section {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100vh;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    color: #5D4037;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.services-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #d0a67d;
+    margin: 10px auto 0;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    font-size: 24px;
+    color: #5D4037;
+    margin-bottom: 10px;
+}
+
+.service-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.testimonials-section {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100vh;
+}
+.testimonials_custom-title {
+    font-size: 36px;
+    color: #5D4037;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    text-transform: capitalize; /* To make the text appear like the one in the image */
+}
+
+.testimonials_custom-title::after {
+    content: '';
+    display: block;
+    width: 50px; /* Adjust width based on desired underline length */
+    height: 3px;  /* Adjust height based on desired underline thickness */
+    background-color: #d0a67d; /* Similar to the beige color in the image */
+    margin: 10px auto 0;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.testimonial-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.testimonial-card .role {
+    color: gray;
+    font-size: 0.9em;
+}
+
+.stars {
+    color: gold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+    height: 20vh;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
