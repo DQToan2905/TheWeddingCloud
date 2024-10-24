@@ -3,23 +3,26 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 60px;
-    background-image: url('https://www.travelandleisure.com/thmb/hm1djoflREA9IsW5rIGwrAGCxbQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-wild-dunes-BEACHWEDHOTEL1223-c4aed295aa9d413bbad9cc911e8c65d5.jpg');
+    background-image: url('./image/bg_1.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-/* Navigation Bar */
+/* #0882B4 */
+/* NAVIGATION BAR */
 .navbar {
-    background-color: #F6F1F1;
+    background-color: white;
     padding: 10px 0;
     border-bottom: 1px solid #f8f8f8;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    margin-bottom: 50px;
 }
 
 .container {
@@ -30,20 +33,12 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #097ed1;
-    display: flex;
-    align-items: center;
-}
-
 .logo-image {
-    width: 40px;
+    width: 220px;
     height: 40px;
-    background-image: url("https://i.pinimg.com/originals/f8/a0/be/f8a0be61afdcd037694ad5c0f45c8865.png");
+    background-image: url("./image/logo.png");
     background-size: cover;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 .nav-links {
@@ -61,10 +56,14 @@ body {
     text-decoration: none;
     color: #5a3921;
     font-size: 16px;
+    padding: 3px 5px;
 }
 
 .nav-links a:hover {
+    font-weight: bold;
     text-decoration: underline;
+    color: #0882B4;
+    transition: 0.3s;
 }
 
 .nav-links a.active {
@@ -72,15 +71,29 @@ body {
     text-decoration: underline;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero-section {
-    background-color: rgba(255, 255, 255, 0.9);
     height: 100vh;
     width: 100vw;
     display: flex;
+    margin-top: 100px; 
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: auto;
+    flex-direction: column; /* Stack hero elements vertically */
+}
+
+.hero-box {
+    background-color:  rgba(255, 255, 255, 0.5);
+    padding: 15px 100px;
+    border-radius: 5px;
+    margin-top: -400px; 
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    color: #146C94;
 }
 
 .hero-text {
@@ -90,6 +103,7 @@ body {
 }
 
 .hero-text h1 {
+    font-family: 'Pacifico', cursive;
     font-size: 48px;
     font-weight: bold;
     margin: 0;
@@ -100,16 +114,14 @@ body {
     margin: 0;
     color: #097ed1;
 }
-
+/* ABOUT SECTION */
 .about-section {
-    /* background-color: #AFD3E2; */
-    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
     margin: 0 auto;
     max-width: 1500px;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     padding-left: 100px;
     padding-right: 100px;
@@ -124,7 +136,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
@@ -133,7 +145,7 @@ body {
 
 .about-text h2 {
     font-size: 36px;
-    color: #5D4037;
+    color: #1E3E62;
     margin-bottom: 10px;
     border-bottom: 4px solid #d0a67d;
     display: inline-block;
@@ -141,14 +153,16 @@ body {
 
 .about-text p {
     font-size: 18px;
-    color: #5D4037;
+    color: #1E3E62;
     line-height: 1.6;
 }
 
+
+/* SERVICES SECTION */
 .services-section {
     text-align: center;
     padding: 50px;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
     height: 100vh;
 }
 
@@ -208,10 +222,12 @@ body {
     line-height: 1.6;
 }
 
+/* TESTIMONIALS SECTION */
 .testimonials-section {
+    /* background-color: #f0f0f0; */
     text-align: center;
     padding: 50px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: r;
     height: 100vh;
 }
 .testimonials_custom-title {
@@ -220,15 +236,15 @@ body {
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
-    text-transform: capitalize; /* To make the text appear like the one in the image */
+    text-transform: capitalize; 
 }
 
 .testimonials_custom-title::after {
     content: '';
     display: block;
-    width: 50px; /* Adjust width based on desired underline length */
-    height: 3px;  /* Adjust height based on desired underline thickness */
-    background-color: #d0a67d; /* Similar to the beige color in the image */
+    width: 50px; 
+    height: 3px; 
+    background-color: #d0a67d; 
     margin: 10px auto 0;
 }
 
@@ -278,6 +294,7 @@ body {
     margin-top: 10px;
 }
 
+/* CONTACT SECTION */
 .contact-section {
     text-align: center;
     padding: 50px;
@@ -299,5 +316,31 @@ body {
     .services-container {
         flex-direction: column;
         align-items: center;
+    }
+}
+/* Đổi Background */
+.background-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: backgroundChange 30s infinite;
+    background-size: cover; 
+    background-position: center;
+    transition: background-image 30s ease-in-out;
+}
+
+
+@keyframes backgroundChange {
+    0% {
+        background-image: url('./image/bg_1.jpg');
+    }
+    33% {
+        background-image: url('./image/bg_2.jpg');
+    }
+    66% {
+        background-image: url('./image/bg_3.jpg');
+    }
+    100% {
+        background-image: url('./image/bg_1.jpg');
     }
 }
