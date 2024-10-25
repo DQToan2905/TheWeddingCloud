@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth; /* Tạo hiệu ứng cuộn mượt mà */
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -73,7 +76,7 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-    height: 100vh;
+    height: 700px;
     width: 100vw;
     display: flex;
     margin-top: 100px; 
@@ -113,41 +116,46 @@ body {
     font-size: 20px;
     margin: 0;
     color: #097ed1;
+    text-align: center;
 }
 /* ABOUT SECTION */
 .about-section {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     margin: 0 auto;
     max-width: 1500px;
-    height: 60vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 50px;
+    margin-top: 100px;
 }
 
 .about-image {
     flex: 1.5;
-    margin-right: 30px;
+    /* margin-right: 30px; */
+    /* justify-items: left; */
 }
 
 .about-image img {
-    width: 100%;
-    height: auto;
+    width: 45vw;
+    height: 80vh;
+    margin-top: 4px;
+    margin-left: 50px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
     flex: 2;
+    margin-left: 50px;
 }
 
 .about-text h2 {
     font-size: 36px;
     color: #1E3E62;
     margin-bottom: 10px;
-    border-bottom: 4px solid #d0a67d;
+    border-bottom: 4px solid#097ed1;
     display: inline-block;
 }
 
@@ -156,168 +164,216 @@ body {
     color: #1E3E62;
     line-height: 1.6;
 }
-
-
-/* SERVICES SECTION */
+/* services SECTION  */
 .services-section {
+    min-height: 90vh ;
     text-align: center;
-    padding: 50px;
-    /* background-color: rgba(255, 255, 255, 0.9); */
-    height: 100vh;
+    padding: 50px 0;
+    background-color: rgba(251, 251, 251, 0.9);
+    margin-top: 100px;
+}  
+.services-section h2{
+    font-size: 36px;
+    color: #1E3E62;
+    margin-bottom: 10px;
+    border-bottom: 4px solid #097ed1;
+    display: inline-block;
+}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+     /* Tạo hiệu ứng khi hover */
+}
+
+.service-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 5px solid #003874; /* Viền 5px xung quanh icon */
+    border-radius: 50%; /* Tạo vòng tròn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-item:hover .service-icon {
+    border-color: #5cd1ec; /* Thay đổi màu viền thành màu khác, ví dụ #8e44ad (màu tím) */
+}
+
+.service-icon img {
+    width: 100px; /* Kích thước icon */
+    height: auto;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #044a79; /* Viền màu xanh dưới tiêu đề */
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
 }
 
 .services-section h2 {
     font-size: 36px;
-    color: #5D4037;
+    color: #1E3E62;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
+    justify-items: center;
+    margin-bottom: 30px;
 }
 
-.services-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #d0a67d;
-    margin: 10px auto 0;
-}
-
-.services-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.service-item {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-    background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.service-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.service-info {
-    padding: 20px;
-}
-
-.service-info h3 {
-    font-size: 24px;
-    color: #5D4037;
-    margin-bottom: 10px;
-}
-
-.service-info p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
 
 /* TESTIMONIALS SECTION */
 .testimonials-section {
-    /* background-color: #f0f0f0; */
+    background-color: #d6875c;
+    padding: 50px 0;
     text-align: center;
-    padding: 50px;
-    background-color: r;
-    height: 100vh;
 }
-.testimonials_custom-title {
+
+.testimonials-section h2 {
     font-size: 36px;
-    color: #5D4037;
+    color: #f8e363;
     margin-bottom: 10px;
-    position: relative;
-    display: inline-block;
-    text-transform: capitalize; 
+    text-align: center;
+}
+.testimonials-section p{
+    font-size: 14px;
+    color: #f8e363;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.testimonials-section .thank-you-message {
+    font-size: 16px;
+    color: #f8e363;
+    margin-bottom: 40px;
 }
 
-.testimonials_custom-title::after {
-    content: '';
-    display: block;
-    width: 50px; 
-    height: 3px; 
-    background-color: #d0a67d; 
-    margin: 10px auto 0;
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.testimonial-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.testimonial-card {
-    background-color: white;
+.testimonial-item {
+    background-color: #24404e;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 30%;
-    max-width: 350px;
-    text-align: center;
+    position: relative;
+}
+.testimonial-item p{
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
-.testimonial-card blockquote {
-    font-style: italic;
-    margin-bottom: 15px;
-    color: #555;
+/* .testimonial-item:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+} */
+
+.testimonial-text {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
-.testimonial-card img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.testimonial-card .name {
-    font-weight: bold;
-    margin-top: 10px;
+.quote-icon {
+    font-size: 50px;
+    color: #ff7b47;
+    line-height: 1;
+    margin-left: 210px;
 }
 
-.testimonial-card .role {
-    color: gray;
-    font-size: 0.9em;
+.testimonial-author {
+    font-size: 16px;
+    color: #f8e363;
 }
 
-.stars {
-    color: gold;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
 
 /* CONTACT SECTION */
-.contact-section {
+/* Footer */
+
+.footer {
+    background-color: #212121;
+    color: #ccc;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     text-align: center;
-    padding: 50px;
-    background-color: #f0f0f0;
-    height: 20vh;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image {
-        margin-bottom: 20px;
-        margin-right: 0;
-    }
-
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
+.footer-social {
+    grid-column: span 3;
+    margin-top: 20px;
+    text-align: center;
 }
+
+.footer-item i,
+.footer-social i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-item i {
+    color: #f44336;
+}
+
+.footer-social i {
+    color: #ccc;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 8px;
+    text-align: center;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+.footer p{
+    color: #a3a2a2;
+    text-align: center;
+}
+
 /* Đổi Background */
 .background-slider {
     position: relative;
