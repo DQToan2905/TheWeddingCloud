@@ -215,11 +215,11 @@ body {
 }
 
 .service-item:hover .service-icon {
-    border-color: #5cd1ec; /* Thay đổi màu viền thành màu khác, ví dụ #8e44ad (màu tím) */
+    border-color: #5cd1ec; 
 }
 
 .service-icon img {
-    width: 100px; /* Kích thước icon */
+    width: 100px;
     height: auto;
 }
 
@@ -227,7 +227,7 @@ h3 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
-    border-bottom: 2px solid #044a79; /* Viền màu xanh dưới tiêu đề */
+    border-bottom: 2px solid #044a79; /
 }
 
 p {
@@ -326,7 +326,69 @@ p {
 
 
 /* CONTACT SECTION */
-/* Footer */
+.contact-form {
+    width: 100vw;
+    max-width: 1200px;
+    padding: 20px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.contact-form p{
+    margin-top: 50px;
+    font-size: 24px;
+    color:  #1E3E62;;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: #212121;
+}
+
+.form-row {
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;    
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    background: white;
+    font-size: 16px;
+}
+
+textarea {
+    height: 200px;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+.send-button {
+    background: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    transition: background 0.3s ease;
+}
+
+.send-button:hover {
+    background: #c0392b;
+}
+
+/* Footer Section */
 
 .footer {
     background-color: #212121;
@@ -380,127 +442,7 @@ p {
 
 
 
-@media (max-width: 768px) {
-    body {
-        background-size: cover; /* Đảm bảo ảnh nền co giãn theo chiều rộng màn hình */
-        background-position: top; /* Đảm bảo ảnh được đặt ở trên cùng của màn hình */
-        background-attachment: scroll; /* Cho phép cuộn nền thay vì cố định */
-    }
-    /* Điều chỉnh kích thước ảnh ở phần "About" */
-    .about-image img {
-        width: 100%; /* Sử dụng toàn bộ chiều rộng màn hình */
-        height: auto; /* Đảm bảo ảnh không bị kéo giãn */
-        margin-left: 0;
-        margin-top: 20px;
-    }
 
-    /* Điều chỉnh lại phần text */
-    .about-text {
-        padding: 20px;
-        text-align: center;
-        margin: 0;
-    }
-
-    /* Bỏ padding lớn */
-    .about-section {
-        padding: 0;
-        margin-top: 50px; /* Điều chỉnh khoảng cách giữa các section */
-    }
-
-    /* Tùy chỉnh nền để không bị lặp hoặc tràn */
-    .about-section {
-        background-size: cover; /* Đảm bảo ảnh nền vừa với khung */
-        background-position: center;
-    }
-    .services-container {
-        grid-template-columns: 1fr; /* Từ 4 cột thành 1 cột */
-        padding: 20px;
-    }
-
-    .service-item {
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    /* Giảm kích thước icon và viền quanh nó */
-    .service-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-     /* Chuyển từ nhiều cột thành 1 cột */
-     .testimonials-container {
-        grid-template-columns: 1fr; /* Chuyển thành 1 cột */
-    }
-
-    /* Điều chỉnh padding của mỗi ô đánh giá */
-    .testimonial-item {
-        padding: 20px;
-        margin-bottom: 20px; /* Thêm khoảng cách giữa các ô */
-        border-radius: 10px;
-    }
-
-    /* Chỉnh lại icon trích dẫn */
-    .quote-icon {
-        font-size: 30px;
-        margin-left: 0;
-        text-align: center;
-    }
-
-    /* Chỉnh lại chữ ký tác giả */
-    .testimonial-author {
-        font-size: 14px;
-        margin-top: 10px;
-        text-align: center;
-    }
-    /* Thu nhỏ logo trên mobile */
-    .logo-image {
-        width: 150px;
-        height: auto;
-    }
-
-    /* Ẩn thanh điều hướng mặc định */
-    .nav-links {
-        display: none; /* Ẩn các liên kết menu trên mobile */
-    }
-
-    /* Thêm nút "hamburger" */
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* Hamburger Menu */
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 28px;
-        color: #146C94;
-        margin-right: 20px;
-    }
-
-    /* Hiển thị menu khi người dùng nhấn vào nút hamburger */
-    .navbar.active .nav-links {
-        display: block;
-        text-align: center;
-        background-color: white;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .nav-links a {
-        font-size: 18px;
-        padding: 10px;
-        display: block;
-    }
-}
 /* Đổi Background */
 /* .background-slider {
     position: relative;
