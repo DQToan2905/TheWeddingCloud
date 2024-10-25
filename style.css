@@ -378,55 +378,88 @@ p {
     text-align: center;
 }
 
-/* Media Query cho màn hình nhỏ hơn 768px (điện thoại và tablet) */
+/* Thêm Media Query cho màn hình nhỏ hơn 768px */
 @media (max-width: 768px) {
-    
-    /* Điều chỉnh phần container */
-    .services-container {
-        grid-template-columns: 1fr; /* Chuyển từ nhiều cột thành 1 cột */
-        padding: 10px;
+
+    /* Điều chỉnh phần navbar */
+    .navbar {
+        padding: 5px 0;
     }
 
-    /* Điều chỉnh phần item để vừa với màn hình nhỏ */
-    .service-item {
-        padding: 20px;
-        margin-bottom: 20px; /* Thêm khoảng cách giữa các items */
+    /* Ẩn logo hoặc thu nhỏ */
+    .logo-image {
+        width: 150px;
+        height: 30px;
     }
 
-    /* Điều chỉnh tiêu đề để không quá to */
-    h2, h3 {
-        font-size: 1.5rem; /* Giảm kích thước chữ */
+    /* Điều chỉnh phần hero box để vừa với màn hình */
+    .hero-box {
+        padding: 10px 30px;
+        margin-top: -300px;
+        font-size: 14px;
     }
 
-    /* Chỉnh lại icon và viền quanh nó */
-    .service-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-        border: 3px solid #003874;
+    /* Chỉnh font cho hero text */
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text p {
+        font-size: 16px;
     }
 
-    /* Footer chỉnh lại cho dễ đọc */
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    /* Điều chỉnh section "about" */
+    .about-image img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .about-text {
+        margin-left: 0;
         text-align: center;
+        padding: 20px;
     }
 
-    .footer-item {
+    /* Giảm kích thước chữ và viền */
+    .about-text h2 {
+        font-size: 24px;
+        border-bottom: 2px solid #097ed1;
+    }
+
+    /* Giảm số cột trong phần dịch vụ */
+    .services-container {
+        grid-template-columns: 1fr; /* Từ 4 cột thành 1 cột */
+        padding: 20px;
+    }
+
+    .service-item {
+        padding: 15px;
         margin-bottom: 15px;
     }
 
-    /* Điều chỉnh biểu tượng mạng xã hội */
-    .footer-social {
-        margin: 20px 0;
+    /* Giảm kích thước icon và viền quanh nó */
+    .service-icon {
+        width: 60px;
+        height: 60px;
     }
 
-    /* Đảm bảo hình ảnh hiển thị đúng */
-    img {
-        max-width: 100%;
-        height: auto;
+    /* Testimonials chỉnh lại grid */
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Chỉnh lại Footer */
+    .footer {
+        display: block;
+        text-align: center;
+        grid-template-columns: none; /* Xóa lưới */
+    }
+
+    .footer-item {
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        margin-top: 15px;
     }
 }
 
