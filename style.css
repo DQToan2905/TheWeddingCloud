@@ -412,30 +412,22 @@ p {
         background-size: cover; /* Đảm bảo ảnh nền vừa với khung */
         background-position: center;
     }
-    /* Điều chỉnh phần dịch vụ để hiển thị thành 1 cột */
     .services-container {
-        grid-template-columns: 1fr; /* Chuyển từ nhiều cột thành 1 cột */
-        padding: 10px;
-    }
-
-    /* Điều chỉnh phần item để vừa với màn hình nhỏ */
-    .service-item {
+        grid-template-columns: 1fr; /* Từ 4 cột thành 1 cột */
         padding: 20px;
-        margin-bottom: 20px; /* Thêm khoảng cách giữa các items */
     }
 
-    /* Điều chỉnh tiêu đề để không quá to */
-    h2, h3 {
-        font-size: 1.5rem; /* Giảm kích thước chữ */
+    .service-item {
+        padding: 15px;
+        margin-bottom: 15px;
     }
 
-    /* Chỉnh lại icon và viền quanh nó */
+    /* Giảm kích thước icon và viền quanh nó */
     .service-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-        border: 3px solid #003874;
+        width: 60px;
+        height: 60px;
     }
+
      /* Chuyển từ nhiều cột thành 1 cột */
      .testimonials-container {
         grid-template-columns: 1fr; /* Chuyển thành 1 cột */
