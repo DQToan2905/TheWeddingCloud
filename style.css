@@ -378,92 +378,113 @@ p {
     text-align: center;
 }
 
-/* Thêm Media Query cho màn hình nhỏ hơn 768px */
-@media (max-width: 768px) {
 
-    /* Điều chỉnh phần navbar */
-    .navbar {
-        padding: 5px 0;
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Đảm bảo ảnh nền co giãn theo chiều rộng màn hình */
+        background-position: top; /* Đảm bảo ảnh được đặt ở trên cùng của màn hình */
+        background-attachment: scroll; /* Cho phép cuộn nền thay vì cố định */
+    }
+    /* Điều chỉnh kích thước ảnh ở phần "About" */
+    .about-image img {
+        width: 100%; /* Sử dụng toàn bộ chiều rộng màn hình */
+        height: auto; /* Đảm bảo ảnh không bị kéo giãn */
+        margin-left: 0;
+        margin-top: 20px;
     }
 
-    /* Ẩn logo hoặc thu nhỏ */
+    /* Điều chỉnh lại phần text */
+    .about-text {
+        padding: 20px;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Bỏ padding lớn */
+    .about-section {
+        padding: 0;
+        margin-top: 50px; /* Điều chỉnh khoảng cách giữa các section */
+    }
+
+    /* Tùy chỉnh nền để không bị lặp hoặc tràn */
+    .about-section {
+        background-size: cover; /* Đảm bảo ảnh nền vừa với khung */
+        background-position: center;
+    }
+     /* Chuyển từ nhiều cột thành 1 cột */
+     .testimonials-container {
+        grid-template-columns: 1fr; /* Chuyển thành 1 cột */
+    }
+
+    /* Điều chỉnh padding của mỗi ô đánh giá */
+    .testimonial-item {
+        padding: 20px;
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các ô */
+        border-radius: 10px;
+    }
+
+    /* Chỉnh lại icon trích dẫn */
+    .quote-icon {
+        font-size: 30px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Chỉnh lại chữ ký tác giả */
+    .testimonial-author {
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    /* Thu nhỏ logo trên mobile */
     .logo-image {
         width: 150px;
-        height: 30px;
-    }
-
-    /* Điều chỉnh phần hero box để vừa với màn hình */
-    .hero-box {
-        padding: 10px 30px;
-        margin-top: -300px;
-        font-size: 14px;
-    }
-
-    /* Chỉnh font cho hero text */
-    .hero-text h1 {
-        font-size: 32px;
-    }
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    /* Điều chỉnh section "about" */
-    .about-image img {
-        width: 90vw;
         height: auto;
     }
 
-    .about-text {
-        margin-left: 0;
-        text-align: center;
-        padding: 20px;
+    /* Ẩn thanh điều hướng mặc định */
+    .nav-links {
+        display: none; /* Ẩn các liên kết menu trên mobile */
     }
 
-    /* Giảm kích thước chữ và viền */
-    .about-text h2 {
-        font-size: 24px;
-        border-bottom: 2px solid #097ed1;
+    /* Thêm nút "hamburger" */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    /* Giảm số cột trong phần dịch vụ */
-    .services-container {
-        grid-template-columns: 1fr; /* Từ 4 cột thành 1 cột */
-        padding: 20px;
+    /* Hamburger Menu */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        color: #146C94;
+        margin-right: 20px;
     }
 
-    .service-item {
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    /* Giảm kích thước icon và viền quanh nó */
-    .service-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    /* Testimonials chỉnh lại grid */
-    .testimonials-container {
-        grid-template-columns: 1fr;
-    }
-
-    /* Chỉnh lại Footer */
-    .footer {
+    /* Hiển thị menu khi người dùng nhấn vào nút hamburger */
+    .navbar.active .nav-links {
         display: block;
         text-align: center;
-        grid-template-columns: none; /* Xóa lưới */
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
     }
 
-    .footer-item {
-        margin-bottom: 20px;
+    .nav-links li {
+        margin: 15px 0;
     }
 
-    .footer-social {
-        margin-top: 15px;
+    .nav-links a {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
     }
 }
-
-
 /* Đổi Background */
 /* .background-slider {
     position: relative;
