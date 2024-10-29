@@ -27,7 +27,7 @@ body {
         right: 0;
         z-index: 100;
         backdrop-filter: blur(10px);
-        width: 100%;
+        max-width: 100%;
     }
 
     .container {
@@ -67,21 +67,19 @@ body {
     }
 
     .nav-links a:hover {
-        font-weight: bold;
-        text-decoration: underline;
+        /* font-weight: bold; */
+        /* text-decoration: underline; */
         color: #0882B4;
         transition: 0.3s;
+        border: 2px solid #0882B4;
+        border-radius: 5px;
     }
 
-    .nav-links a.active {
-        font-weight: bold;
-        text-decoration: underline;
-    }
     /* ------------------------------------------------------------------------------------------------------------------------------------- */
     /* HERO */
     .hero-section {
         height: 700px;
-        width: 100%;
+        max-width: 100%;
         display: flex;
         /* margin-top: 100px;  */
         justify-content: center;
@@ -128,11 +126,10 @@ body {
         background-color: rgba(255, 255, 255, 0.7);
         display: flex;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         height: 100vh;
         margin: 0 auto;
         padding:  auto;
-        /* margin-top: 100px; */
     }
 
     .about-image {
@@ -174,7 +171,7 @@ body {
         background-color: rgba(255, 255, 255, 0.7);
         padding: 50px 0;
         text-align: center;
-        width: 100%;
+        max-width: 100%;
         margin-top: 100px;
     }
 
@@ -239,6 +236,10 @@ body {
         justify-items: center;
         margin-bottom: 30px;
         border-bottom: 4px solid #097ed1;
+    }
+    .services-section p{
+        font-size: 12px;
+
     }
     .service-link {
         text-decoration: none;
@@ -336,7 +337,7 @@ body {
         background-color: #d6875c;
         padding: 50px 0;
         text-align: center;
-        width: 100%s;
+        max-width: 100%;
     }
 
     .testimonials-section h2 {
@@ -406,7 +407,7 @@ body {
 /* -------------------------------------------------------------------------------------------------------------------------------------- */
 /* CONTACT */
     .contact-form {
-        width: 100vw;
+        max-width: 100%;
         max-width: 1200px;
         padding: 20px;
         align-content: center;
@@ -478,7 +479,7 @@ body {
         grid-gap: 20px;
         text-align: center;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
     }
 
     .footer-social {
@@ -520,7 +521,19 @@ body {
         text-align: center;
     }
 /* --------------------------------------------------------------------------------------------------------------------------------------- */
-
+.home-button {
+    /* background-color: #4CAF50; 
+    color: white;  */
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+    margin-top: 20px;
+    text-decoration: underline;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* Đổi Background */
